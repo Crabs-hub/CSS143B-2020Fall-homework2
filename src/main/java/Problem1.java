@@ -12,7 +12,7 @@ public class Problem1 {
 
     // Do not change signature (function name, parameters type, and return type)
     public static void colorSort(int[] nums) {
-        int right = nums.length - 1;
+        int right = nums.length;
         int left = 0 ;
         int temp;
         for(int i = 0 ; i < right; i++){
@@ -24,8 +24,8 @@ public class Problem1 {
             }
             else if(nums[i] == 2){
                 temp = nums[i];
-                nums[i] = nums[right];
-                nums[right] = temp;
+                nums[i] = nums[right - 1];
+                nums[right - 1] = temp;
                 i--;
                 right--;
             }
